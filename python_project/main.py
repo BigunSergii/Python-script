@@ -46,7 +46,7 @@ def main():
         migrationDB.mainMigration(ip, dbName, tableName, user, passwd, Data)
     if  dbName != None and tableName !=None and ip != None and user != None and passwd != None:
         migrationDB.mainCreate(dbName, tableName, user, passwd, ip)
-    if installSql = "yes":
+    if installSql == "yes":
         #instMysql = 'apt install mysql-server'
         statusMysql = 'systmctl status mysql'
         os.system(statusMysql)
