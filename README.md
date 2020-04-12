@@ -1,3 +1,1 @@
-asdasd
-Asda
-# Python-scripta
+# Python-script
