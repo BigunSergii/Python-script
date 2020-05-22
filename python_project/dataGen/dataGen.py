@@ -40,8 +40,8 @@ def mainGen(pathTofile, newfile):
         list1 = i.split(";")
         id = list1[0]
         fullName = list1[1].split(" ")
-        name = fullName[0]
-        lastName = fullName[1]
+        lastName = fullName[0]
+        name = fullName[1]
         fatherName = fullName[2].strip()
         phone = phoneGen()
         mail = MailGen()
@@ -54,7 +54,7 @@ def mainGen(pathTofile, newfile):
             'ID': id,
             'NAME': name,
             'LASTNAME': lastName,
-            'FATERNAME': fatherName,
+            'FATHERNAME': fatherName,
             'EMAIL': mail,
             'AGE': age,
             'PHONE': phone,

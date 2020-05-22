@@ -54,7 +54,7 @@ def create(ip, dbName, tableName, user, passwd):
     midle = '{print "SET foreign_key_checks = 0; ALTER TABLE", $1, "CONVERT TO CHARACTER SET utf8 COLLATE utf8_general_ci; SET foreign_key_checks = 1; "}'
     code = "mysql --database={0} -B -N -e \"SHOW TABLES\" | awk '{1}' | mysql --database={0}".format(
         dbName, midle)
-    createUser = 'mysql -u root -p=1 -e "DROP USER \'{0}\'@\'{1}\';flush privileges; CREATE USER \'{0}\'@\'{1}\' IDENTIFIED BY \'{2}\'; grant all privileges on *.* to \'{0}\'@\'{1}\';"'.format(
+    createUser = 'mysql -u root -p1 -e "DROP USER \'{0}\'@\'{1}\';flush privileges; CREATE USER \'{0}\'@\'{1}\' IDENTIFIED BY \'{2}\'; grant all privileges on *.* to \'{0}\'@\'{1}\';"'.format(
         user, ip, passwd)
     os.system(createUser)
     mydb = mysql.connector.connect(
