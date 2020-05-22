@@ -104,7 +104,6 @@ def main():
         dropDB(ip, dbName, user, passwd)
     elif installSql == "yes":
         instMysql = 'apt install mysql-server'
-        #statusMysql = 'systmctl status mysql'
         os.system(instMysql)
 
 
